@@ -1,0 +1,258 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    color: #333; 
+}
+
+/* Sticky Navbar */
+.navbar {
+    background-color: #004080; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #000; 
+    font-size: 1.1em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #004080; 
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(135deg, #004080, #0073e6); 
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header img {
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styling */
+main {
+    padding: 60px 20px;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Portfolio Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.project {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 a {
+    text-decoration: none;
+    color: #004080;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.project h3 a:hover {
+    color: #0073e6; 
+}
+
+.project p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #004080;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerP {
+    display: flex;
+    flex-direction: row;
+  width: 9.25em;
+  height: 1.15em;
+  font-size: 3.5rem;
+  font-family: sans-serif;
+  position: relative;
+  
+  &:hover .upper {
+    translate: -261px 0px;
+    background-color: transparent;
+    z-index: 1;
+  }
+  &:hover .lower {
+    translate: 260px 0px;
+    background-color: transparent;
+  }
+  &:hover .inside{
+    background-color: white;
+  }
+}
+
+.containerP div {
+  left: 0;
+  width: fit-content;
+  display: block;
+  text-align: center;
+}
+
+.upper {
+  position: relative;
+  top: 0;
+  height: 100%;
+  color: black;  
+  overflow: hidden;
+  z-index: 3;
+  background-color: #ffffff;
+  transition-duration: 2s;
+}
+
+.lower {
+    position: relative;
+    top: 0;
+    height: 100%;
+    color: black;  
+    overflow: hidden;
+    z-index: 3;
+    background-color: #ffffff;
+    transition-duration: 2s;
+}
+
+.inside {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-40%);
+  text-align: center;
+  z-index: 1;
+  font-size: 2rem;
+  color: #004080;
+  transition-duration: 2s;
+}
+
